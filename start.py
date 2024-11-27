@@ -36,10 +36,10 @@ async def print_stats(stop_event):
 
 async def main():
     # 用户输入
-    protocol = input(f"{Fore.CYAN}感谢使用抖遥DDoS，GitHub https://github.com/douyaobaby/DDoS-Attack 输入y或yes继续: {Style.RESET_ALL}").strip().lower()
-       while protocol not in ("y", "yes"):
+    protocol = input(f"{Fore.CYAN}感谢使用 输入 (y/yes)继续: {Style.RESET_ALL}").strip().lower()
+    while protocol not in ("y", "yes"):
         print(f"{Fore.RED}无效输入，请输入 y 或 yes。{Style.RESET_ALL}")
-        protocol = input(f"{Fore.CYAN}感谢使用抖遥DDoS，GitHub https://github.com/douyaobaby/DDoS-Attack 输入y或yes继续: {Style.RESET_ALL}").strip().lower()
+        protocol = input(f"{Fore.CYAN}感谢使用 输入 (y/yes)继续: {Style.RESET_ALL}").strip().lower()
         
     protocol = input(f"{Fore.CYAN}请选择协议 (http/https): {Style.RESET_ALL}").strip().lower()
     while protocol not in ("http", "https"):
