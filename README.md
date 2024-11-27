@@ -7,7 +7,7 @@ Zh-CN:如果你需要G以上带宽的服务器，您可以联系我，我的电�
 
 En: If you need G or more big port vps , You can pm me ， My telegram @douyaokf6
 
-#Install
+# Install
 pip install httpx colorama
 git clone https://github.com/douyaobaby/DDoS-Attack.git
 cd DDoS-Attack
