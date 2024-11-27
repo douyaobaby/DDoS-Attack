@@ -39,6 +39,8 @@ async def main():
     protocol = input(f"{Fore.CYAN}感谢使用抖遥DDoS，GitHub https://github.com/douyaobaby/DDoS-Attack 输入y或yes继续: {Style.RESET_ALL}").strip().lower()
        while protocol not in ("y", "yes"):
         print(f"{Fore.RED}无效输入，请输入 y 或 yes。{Style.RESET_ALL}")
+        protocol = input(f"{Fore.CYAN}感谢使用抖遥DDoS，GitHub https://github.com/douyaobaby/DDoS-Attack 输入y或yes继续: {Style.RESET_ALL}").strip().lower()
+        
     protocol = input(f"{Fore.CYAN}请选择协议 (http/https): {Style.RESET_ALL}").strip().lower()
     while protocol not in ("http", "https"):
         print(f"{Fore.RED}无效输入，请选择 http 或 https。{Style.RESET_ALL}")
