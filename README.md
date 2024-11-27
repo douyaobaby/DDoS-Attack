@@ -9,6 +9,9 @@ En: If you need G or more big port vps , You can pm me ， My telegram @douyaokf
 
 # Install
 pip install httpx colorama
+
 git clone https://github.com/douyaobaby/DDoS-Attack.git
+
 cd DDoS-Attack
+
 python3 start.py
