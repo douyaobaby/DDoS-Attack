@@ -28,7 +28,7 @@ async def print_stats(stop_event):
     """定时打印统计信息"""
     global success_count, failure_count
     while not stop_event.is_set():  # 检查停止事件
-        await asyncio.sleep(1)  # 每 1 秒打印一次
+        await asyncio.sleep(5)  # 每 5 秒打印一次
         async with lock:
             success, failure = success_count, failure_count
             success_count = failure_count = 0  # 重置统计数据
@@ -36,7 +36,7 @@ async def print_stats(stop_event):
 
 async def main():
     # 用户输入
-    protocol = input(f"{Fore.CYAN}感谢使用 输入 (y/yes)继续: {Style.RESET_ALL}").strip().lower()
+    protocol = input(f"{Fore.CYAN}感谢使用抖遥DDoS 输入 (y/yes)继续: {Style.RESET_ALL}").strip().lower()
     while protocol not in ("y", "yes"):
         print(f"{Fore.RED}无效输入，请输入 y 或 yes。{Style.RESET_ALL}")
         protocol = input(f"{Fore.CYAN}感谢使用 输入 (y/yes)继续: {Style.RESET_ALL}").strip().lower()
@@ -46,7 +46,7 @@ async def main():
         print(f"{Fore.RED}无效输入，请选择 http 或 https。{Style.RESET_ALL}")
         protocol = input(f"{Fore.CYAN}请选择协议 (http/https): {Style.RESET_ALL}").strip().lower()
         
-    target_ip = input(f"{Fore.CYAN}请输入目标 IP 地址: {Style.RESET_ALL}")
+    target_ip = input(f"{Fore.CYAN}请输入目标IP/域名: {Style.RESET_ALL}")
     target_port = input(f"{Fore.CYAN}请输入目标端口: {Style.RESET_ALL}")
     duration = int(input(f"{Fore.CYAN}请输入测试持续时间（秒）: {Style.RESET_ALL}"))
 
